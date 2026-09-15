@@ -1,0 +1,391 @@
+ body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+} 
+
+.container {
+    flex: 1;
+}
+
+
+.show-content {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .show-content {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+/* Navbar */
+.navbar {
+min-height: 5rem;
+background-color: white;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+@media (max-width: 991px) {
+    .navbar {
+        height: auto;
+        min-height: 5rem;
+    }
+}
+
+/* Footer */
+.f-info-links a {
+text-decoration: none;
+color: #222222;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info-links, 
+.f-info-socials, .f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.f-info {
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/*  Cards */
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text p {
+    font-weight: 400 !important;
+}
+
+.listing-link {
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+
+/* Card Effect */
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+/*New Page*/
+.add-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/*Edit Page*/
+.edit-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+
+/* ================= SHOW PAGE ================= */
+
+.show-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ================= SHOW IMAGE ================= */
+
+.show-img {
+    width: 800px !important;
+    height: 450px !important;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto 25px auto !important;
+}
+
+
+/* ================= LISTING DETAILS ================= */
+
+.show-main-row {
+    width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 380px 380px;
+    gap: 40px;
+}
+
+.show-page h3 {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+.show-page h4 {
+    margin-bottom: 15px;
+}
+
+.show-page hr {
+    margin: 20px 0;
+}
+
+
+/* ================= BOOKING CARD ================= */
+
+.booking-card {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    max-width: 400px;
+    position: sticky;
+    top: 100px;
+    background: white;
+    margin-left: auto;
+}
+
+.booking-body {
+    padding: 24px;
+}
+
+.booking-body h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.booking-body h4 span {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+
+/* ================= BOOKING DATES ================= */
+
+.booking-dates {
+    display: flex;
+    border: 1px solid #888;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.date-box {
+    width: 50%;
+    padding: 10px;
+}
+
+.date-box:first-child {
+    border-right: 1px solid #888;
+}
+
+.date-box label,
+.guest-box label {
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.date-box input {
+    border: none;
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+}
+
+
+/* ================= GUESTS ================= */
+
+.guest-box {
+    border: 1px solid #888;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.guest-box input {
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+
+/* ================= TOTAL ================= */
+
+.booking-total {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+
+/* ================= RESERVE BUTTON ================= */
+
+.reserve-btn {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 13px;
+    background: #fe424d;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.reserve-btn:hover {
+    background: #e31c2b;
+}
+
+
+/* ================= REVIEWS ================= */
+
+.review-section {
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.review-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 0;
+}
+
+.review-card .review-card-body {
+    padding: 20px;
+}
+
+
+/* ================= MAP ================= */
+
+.map-section {
+    max-width: 900px;
+    margin: 40px auto 30px;
+}
+
+.map-section h3 {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .show-page {
+        width: 100%;
+        padding: 0 15px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .show-img {
+        width: 100% !important;
+        height: 300px !important;
+        margin: 0 0 20px 0 !important;
+        display: block;
+        object-fit: cover;
+    }
+
+    .show-page .row {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .show-main-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    overflow: hidden;
+    }
+    
+    .booking-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    }
+
+    .booking-card {
+    width: 85% !important;
+    max-width: 320px !important;
+    margin: 25px 0 !important;
+    position: static !important;
+    box-sizing: border-box !important;
+    }
+
+    .review-section {
+        width: 100%;
+        margin: 35px 0 0 0;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .map-section {
+        width: 100%;
+        margin: 35px 0 0 0;
+    }
+
+    #map {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 40px;
+    }
+}

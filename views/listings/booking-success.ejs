@@ -1,0 +1,88 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="container my-5">
+
+  <div class="card col-12 col-md-8 col-lg-6 mx-auto shadow-sm">
+
+    <div class="card-body text-center p-4">
+
+      <!-- Success Message -->
+
+      <h2 class="mb-3">
+        🎉 Booking Confirmed!
+      </h2>
+
+      <p class="text-muted mb-4">
+        Your booking has been successfully confirmed.
+      </p>
+
+
+      <!-- Listing Information -->
+
+      <div class="text-start">
+
+        <h4 class="mb-3">
+          <%= booking.listing.title %>
+        </h4>
+
+        <p>
+          <b>Location:</b>
+          <%= booking.listing.location %>,
+          <%= booking.listing.country %>
+        </p>
+
+        <p>
+          <b>Check-in:</b>
+          <%= new Date(booking.checkIn).toLocaleDateString("en-IN") %>
+        </p>
+
+        <p>
+          <b>Check-out:</b>
+          <%= new Date(booking.checkOut).toLocaleDateString("en-IN") %>
+        </p>
+
+        <p>
+          <b>Guests:</b>
+          <%= booking.guests %>
+        </p>
+
+        <p>
+          <b>Price:</b>
+          ₹<%= booking.listing.price.toLocaleString("en-IN") %> / night
+        </p>
+
+        <hr>
+
+        <h5>
+          Total Price:
+          ₹<%= booking.totalPrice.toLocaleString("en-IN") %>
+        </h5>
+
+      </div>
+
+
+      <!-- Buttons -->
+
+      <div class="mt-4">
+
+        <a
+          href="/listings/<%= booking.listing._id %>"
+          class="btn btn-dark me-2"
+        >
+          View Listing
+        </a>
+
+        <a
+          href="/listings"
+          class="btn btn-outline-dark"
+        >
+          Back to Listings
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

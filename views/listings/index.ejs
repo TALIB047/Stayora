@@ -1,0 +1,107 @@
+<% layout("/layouts/boilerplate") %> 
+<style>
+ #filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem ;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+ }
+
+ .filter {
+  text-align: center;
+  margin: 0;
+  flex-shrink: 0;
+  opacity: 0.7;
+ }
+
+ .filter:hover {
+  opacity: 1;
+  cursor: pointer;
+ }
+
+ .filter p {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+ }
+
+@media (max-width: 768px) {
+    #filters {
+        gap: 1rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .filter {
+        font-size: 0.8rem;
+    }
+}
+</style>
+
+   
+    <div id="filters">
+      <div class="filter" data-category="Trending">
+        <div><i class="fa-solid fa-fire"></i></div>
+        <p>Trending</p>
+      </div>
+      <div class="filter" data-category="Rooms">
+        <div><i class="fa-solid fa-bed"></i></div>
+        <p>Rooms</p>
+      </div>
+      <div class="filter" data-category="Beach">
+        <div><i class="fa-solid fa-umbrella-beach"></i></div>
+        <p>Beach</p>
+      </div>
+      <div class="filter" data-category="Mountains">
+        <div><i class="fa-solid fa-mountain"></i></div>
+        <p>Mountains</p>
+      </div>
+      <div class="filter" data-category="Luxury">
+        <div><i class="fa-solid fa-diamond"></i></div>
+        <p>Luxury</p>
+      </div>
+      </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mt-3">
+        <% for(let listing of allListings) { %>
+          <a href="/listings/<%= listing._id %>" class="listing-link">
+            <div class="card listing-class">
+                <img src="<%= listing.image.url %>" 
+                class="card-img-top"
+                 alt="listing_image" 
+                 style="height: 20rem">
+                  <div class="card-img-overlay"></div>
+                <div class="card-body">
+                  <p class="card-text">
+                   <b><%= listing.title %></b>  <br>
+                    &#8377; <%= listing.price.toLocaleString("en-IN") %> / night
+                  </p>
+                </div>
+              </div>
+              </a>
+              
+              <% } %>
+
+              <script>
+     const filters = document.querySelectorAll(".filter");
+
+     filters.forEach((filter) => {
+     filter.addEventListener("click", () => {
+
+      const category = filter.dataset.category;
+
+      window.location.href = `/listings?category=${category}`;
+
+      });
+      });
+     </script>
+    </div>
+
+   
+
+
+
+
