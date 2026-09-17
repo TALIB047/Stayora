@@ -80,6 +80,8 @@ color: #222222;
 /*  Cards */
 .listing-card {
     border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
     margin-bottom: 2rem;
 }
 
@@ -89,11 +91,19 @@ color: #222222;
     object-fit: cover !important;
 }
 
-.card-body {
+ .listing-card .card-body {
     padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
-.card-text p {
+ .listing-card .card-text {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
     font-weight: 400 !important;
 }
 
